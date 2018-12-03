@@ -1,10 +1,4 @@
-const { sumArray, calculateFirstRepeatedFrequency } = require("./index");
-
-test("sumArray", () => {
-  expect(sumArray([1, 1, 1])).toBe(3);
-  expect(sumArray([1, -1, -1])).toBe(-1);
-  expect(sumArray([-1, -2, -3])).toBe(-6);
-});
+const { calculateFirstRepeatedFrequency } = require("../helpers");
 
 test("calculateFirstRepeatedFrequency", () => {
   // expect(calculateFirstRepeatedFrequency([1, -1])).toBe(0);

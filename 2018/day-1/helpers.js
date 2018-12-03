@@ -1,13 +1,12 @@
 const fs = require("fs");
+const path = require("path");
 
-exports.parseInput = path =>
+exports.parseInput = () =>
   fs
-    .readFileSync(path, "utf8")
+    .readFileSync(path.join(__dirname, "input.txt"), "utf8")
     .trim()
     .split("\n")
     .map(str => Number(str));
-
-exports.sumArray = changes => changes.reduce((acc, num) => acc + num, 0);
 
 exports.calculateFirstRepeatedFrequency = changes => {
   const foundFrequencies = {};
