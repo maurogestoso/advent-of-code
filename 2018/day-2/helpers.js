@@ -26,7 +26,7 @@ exports.count2sAnd3s = _.reduce(
   { 2: 0, 3: 0 }
 );
 
-exports.areOnceCharOff = (str1, str2) => {
+const areOnceCharOff = (str1, str2) => {
   return (
     str1.split("").reduce((acc, char1, i) => {
       const char2 = str2[i];
@@ -42,7 +42,7 @@ exports.getCloseWords = words => {
     for (let j = i + 1; j < words.length; j++) {
       const word2 = words[j];
 
-      if (exports.areOnceCharOff(word1, word2)) {
+      if (areOnceCharOff(word1, word2)) {
         return { word1, word2 };
       }
     }

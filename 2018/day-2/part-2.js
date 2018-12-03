@@ -1,10 +1,5 @@
 const flow = require("lodash/fp/flow");
-const {
-  parseInput,
-  areOnceCharOff,
-  getCommonChars,
-  getCloseWords
-} = require("./helpers");
+const { parseInput, getCommonChars, getCloseWords } = require("./helpers");
 
 // #region input
 const parsedInput = parseInput();
